@@ -50,6 +50,15 @@ table {
 body{
     background-color: rgba(10,10,10,1);
     color: white;
+    font-family: 'Gugi', cursive;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 /* Main container */
@@ -64,18 +73,18 @@ body{
     /* Header */
     header {
         width: 100%;
+        background-color: rgb(15, 21, 23);
+        margin-bottom: 25px;
         
         .navBar {
             display: flex;
             align-items: center;
-            margin: 25px 0;
+            margin: 40px 0;
 
             h1 {
                 margin-left: 50px;
-                font-family: 'Roboto Mono', monospace;
                 font-size: 2rem;
                 font-weight: 200;
-                color: lightsteelblue;
                 font-style: italic;
             }
 
@@ -84,7 +93,7 @@ body{
 
                 a {
                     font-size: 1.2rem;
-                    color: lightgoldenrodyellow;
+                    color: white;
                     text-decoration: none;
                     margin: 0 40px;
                     background-color: rgb(30, 30, 30);
@@ -107,27 +116,25 @@ body{
         text-align: center;
         background-size: 100% 100%;
         width: 95vw;
-        height: 90vh;
+        height: 80vh;
 
         .bannerText {
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.2);
             padding: 35px 75px;
             border-radius: 10px;
 
             h1 {
-                font-size: 2rem;
                 margin: 25px 0;
-                font-family: 'Roboto Mono', monospace;
-
+                font-style: italic;
+                letter-spacing: 8px;
             }
 
             p {
-                font-size: 2rem;
                 font-style: italic;
                 margin: 25px 0;
             }
@@ -140,7 +147,7 @@ body{
         display: flex;
         flex-wrap: wrap;
         margin: 40px 0;
-        background: linear-gradient(to bottom, #171d22 0%,#182923 100%);
+        background: linear-gradient(to bottom, #171d22 50%,#182923 100%);
         justify-content: space-evenly;
         border-radius: 5px;
 
@@ -164,6 +171,7 @@ body{
         }
     }
 
+    /* Jump image */
     #jump {
         width: 95%;
         height: 300px;
@@ -175,7 +183,7 @@ body{
         display: flex;
         flex-wrap: wrap;
         margin: 40px;
-        background: linear-gradient(to bottom, #182923 0%,#171d22 100%);
+        background: linear-gradient(to top, #171d22 50%,#182923 100%);
         justify-content: space-evenly;
         border-radius: 5px;
 
@@ -203,12 +211,12 @@ body{
     /* Footer */
     footer {
     width: 100%;
-    height: 500px;
+    height: 200px;
     background-color: black;
 
     .footer {
-        height: 475px;
-        background-color: rgb(41, 41, 41);
+        height: 175px;
+        background-color: rgb(20, 20, 20);
     }
 
     }
