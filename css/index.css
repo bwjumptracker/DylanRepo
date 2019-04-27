@@ -184,7 +184,7 @@ p {
   background-color: lightgrey;
 }
 .mainContainer .banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("img/bball.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../img/bball.jpg");
   background-repeat: no-repeat;
   text-align: center;
   background-size: 100% 100%;
@@ -193,12 +193,13 @@ p {
 }
 .mainContainer .banner .bannerText {
   position: absolute;
+  width: 40%;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   background: rgba(0, 0, 0, 0.2);
-  padding: 35px 75px;
+  padding: 35px 10px;
   border-radius: 10px;
 }
 .mainContainer .banner .bannerText h1 {
