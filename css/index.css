@@ -189,7 +189,7 @@ p {
 }
 .mainContainer header .navBar nav a:hover {
   color: white;
-  background-color: lightgrey;
+  background-color: darkgrey;
 }
 .mainContainer header .navBar nav .getStarted {
   background-color: #003e64;
@@ -207,7 +207,8 @@ p {
   }
 }
 .mainContainer .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../img/bball.jpg");
+  /* Temp background URL to work with github */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("https://raw.githubusercontent.com/bwjumptracker/DylanRepo/dylan-gosnell/img/bball.jpg");
   background-repeat: no-repeat;
   text-align: center;
   background-size: 100% 100%;
