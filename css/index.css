@@ -217,7 +217,7 @@ p {
   margin: 40px 0;
   background: linear-gradient(to bottom, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .mainContainer .featureContainer .featureHeading {
   width: 80%;
@@ -228,12 +228,25 @@ p {
   font-size: 2rem;
 }
 .mainContainer .featureContainer .featurePanel {
-  width: 30%;
-  height: 400px;
+  width: 25%;
+  height: 300px;
   margin: 30px 0;
+  padding: 30px 2%;
   text-align: center;
   background-color: #0f0f0f;
   border-radius: 10px;
+}
+.mainContainer .featureContainer .featurePanel .fa-bolt {
+  color: #ffff96;
+  margin-bottom: 25px;
+}
+.mainContainer .featureContainer .featurePanel .fa-angle-double-up {
+  color: lightcoral;
+  margin-bottom: 25px;
+}
+.mainContainer .featureContainer .featurePanel .fa-chart-bar {
+  color: lightgreen;
+  margin-bottom: 25px;
 }
 .mainContainer #jump {
   width: 95%;
@@ -246,7 +259,7 @@ p {
   margin: 40px;
   background: linear-gradient(to top, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .mainContainer .testContainer .testHeading {
   width: 80%;
@@ -271,6 +284,7 @@ p {
   background-color: black;
 }
 .mainContainer footer .footer {
-  height: 175px;
+  height: 100px;
   background-color: #141414;
+  padding: 40px;
 }
