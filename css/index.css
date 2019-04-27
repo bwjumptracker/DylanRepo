@@ -148,7 +148,7 @@ p {
   flex-direction: column;
   align-items: center;
   /* Header */
-  /* Main banner */
+  /* Banner / Hero image */
   /* Features */
   /* Jump image */
   /* Testimonials */
@@ -156,13 +156,15 @@ p {
 }
 .mainContainer header {
   width: 100%;
-  background-image: linear-gradient(45deg, #181425, #172a38);
+  background-image: linear-gradient(45deg, #161222, #172a38);
   margin-bottom: 25px;
+  /* Navigation bar */
 }
 .mainContainer header .navBar {
   display: flex;
   align-items: center;
-  margin: 40px 0;
+  justify-content: center;
+  height: 150px;
 }
 .mainContainer header .navBar h1 {
   margin-left: 50px;
@@ -171,13 +173,16 @@ p {
   font-style: italic;
 }
 .mainContainer header .navBar nav {
+  margin: auto 0;
   margin-left: auto;
+  /* Navigation links */
+  /* Start Here button with arrow animation */
 }
 .mainContainer header .navBar nav a {
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
-  margin: 0 40px;
+  margin: 0 30px;
   background-color: rgba(255, 255, 255, 0.05);
   padding: 12px 20px;
   border-radius: 5px;
@@ -186,18 +191,34 @@ p {
   color: white;
   background-color: lightgrey;
 }
+.mainContainer header .navBar nav .getStarted {
+  background-color: #003e64;
+}
+.mainContainer header .navBar nav .getStarted .fa-angle-double-up {
+  -webkit-animation: av_pulsate 2s infinite;
+  animation: av_pulsate 2s infinite;
+}
+@keyframes av_pulsate {
+  0% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .mainContainer .banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../img/bball.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../img/bball.jpg");
   background-repeat: no-repeat;
   text-align: center;
   background-size: 100% 100%;
-  width: 95vw;
+  width: 100vw;
   height: 80vh;
+  /* Text box */
 }
 .mainContainer .banner .bannerText {
   position: absolute;
   width: 40%;
-  top: 40%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -222,6 +243,8 @@ p {
   background: linear-gradient(to bottom, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
   border-radius: 10px;
+  /* Heading */
+  /* Panels */
 }
 .mainContainer .featureContainer .featureHeading {
   width: 80%;
@@ -264,6 +287,8 @@ p {
   background: linear-gradient(to top, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
   border-radius: 10px;
+  /* Heading */
+  /* Panels */
 }
 .mainContainer .testContainer .testHeading {
   width: 80%;
@@ -288,6 +313,7 @@ p {
   background-color: black;
   display: flex;
   background-image: linear-gradient(45deg, #181425, #172a38);
+  /* Footer container */
 }
 .mainContainer footer .footerBox {
   width: 33%;
