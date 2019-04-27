@@ -133,6 +133,7 @@ body {
 }
 h1 {
   font-size: 2rem;
+  margin: 10px 0;
 }
 p {
   font-size: 1.2rem;
@@ -176,7 +177,7 @@ p {
   text-decoration: none;
   margin: 0 40px;
   background-color: #1e1e1e;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
 }
 .mainContainer header .navBar nav a:hover {
@@ -239,15 +240,15 @@ p {
 }
 .mainContainer .featureContainer .featurePanel .fa-bolt {
   color: #ffff96;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .mainContainer .featureContainer .featurePanel .fa-angle-double-up {
   color: lightcoral;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .mainContainer .featureContainer .featurePanel .fa-chart-bar {
   color: lightgreen;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .mainContainer #jump {
   width: 95%;
@@ -281,11 +282,26 @@ p {
 }
 .mainContainer footer {
   width: 100%;
-  height: 200px;
+  height: 225px;
   background-color: black;
+  display: flex;
+  background-image: linear-gradient(45deg, #181425, #172a38);
 }
-.mainContainer footer .footer {
+.mainContainer footer .footerBox {
+  width: 33%;
   height: 100px;
-  background-color: #141414;
   padding: 40px;
+}
+.mainContainer footer .footerBox span {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 2rem;
+  border-bottom: 5px solid #003e64;
+}
+.mainContainer footer .footerBox .fab {
+  margin-right: 20px;
+}
+.mainContainer footer .footerBox a {
+  color: white;
 }
