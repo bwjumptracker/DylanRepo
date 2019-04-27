@@ -130,6 +130,8 @@ body {
   background-color: #0a0a0a;
   color: white;
   font-family: 'Gugi', cursive;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 h1 {
   font-size: 2rem;
@@ -154,7 +156,7 @@ p {
 }
 .mainContainer header {
   width: 100%;
-  background-color: #0f1517;
+  background-image: linear-gradient(45deg, #181425, #172a38);
   margin-bottom: 25px;
 }
 .mainContainer header .navBar {
@@ -176,8 +178,8 @@ p {
   color: white;
   text-decoration: none;
   margin: 0 40px;
-  background-color: #1e1e1e;
-  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
   border-radius: 5px;
 }
 .mainContainer header .navBar nav a:hover {
