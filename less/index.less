@@ -167,6 +167,7 @@ p {
             background: rgba(0, 0, 0, 0.2);
             padding: 35px 10px;
             border-radius: 10px;
+            box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
 
             h1 {
                 margin: 25px 0;
@@ -215,31 +216,31 @@ p {
                 -webkit-animation: featurePulse 10s infinite; 
                 animation: featurePulse 10s infinite;
                 animation-delay: @delay;
-                opacity: 0.1;
+                opacity: 0.05;
                 
                 @keyframes featurePulse {
-                    0%      {opacity: 0.1;};
+                    0%      {opacity: 0.05;};
                         
                     50%     {opacity: 1;};
                         
-                    100%    {opacity: 0.1;};
+                    100%    {opacity: 0.05;};
                 }
             }
 
             .fa-bolt {
-                color: rgb(255, 255, 150);
+                color: yellow;
                 margin-bottom: 10px;
                 .anim(0.5s);
             }
 
             .fa-angle-double-up {
-                color: lightcoral;
+                color: red;
                 margin-bottom: 10px;
                 .anim(1.5s);
             }
 
             .fa-chart-bar {
-                color: lightgreen;
+                color: rgb(0, 255, 0);
                 margin-bottom: 10px;
                 .anim(2.5s);
             }

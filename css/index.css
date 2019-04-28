@@ -239,6 +239,7 @@ p {
   background: rgba(0, 0, 0, 0.2);
   padding: 35px 10px;
   border-radius: 10px;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
 }
 .mainContainer .banner .bannerText h1 {
   margin: 25px 0;
@@ -278,60 +279,60 @@ p {
   border-radius: 10px;
 }
 .mainContainer .featureContainer .featurePanel .fa-bolt {
-  color: #ffff96;
+  color: yellow;
   margin-bottom: 10px;
   -webkit-animation: featurePulse 10s infinite;
   animation: featurePulse 10s infinite;
   animation-delay: 0.5s;
-  opacity: 0.1;
+  opacity: 0.05;
 }
 @keyframes featurePulse {
   0% {
-    opacity: 0.1;
+    opacity: 0.05;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.05;
   }
 }
 .mainContainer .featureContainer .featurePanel .fa-angle-double-up {
-  color: lightcoral;
+  color: red;
   margin-bottom: 10px;
   -webkit-animation: featurePulse 10s infinite;
   animation: featurePulse 10s infinite;
   animation-delay: 1.5s;
-  opacity: 0.1;
+  opacity: 0.05;
 }
 @keyframes featurePulse {
   0% {
-    opacity: 0.1;
+    opacity: 0.05;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.05;
   }
 }
 .mainContainer .featureContainer .featurePanel .fa-chart-bar {
-  color: lightgreen;
+  color: #00ff00;
   margin-bottom: 10px;
   -webkit-animation: featurePulse 10s infinite;
   animation: featurePulse 10s infinite;
   animation-delay: 2.5s;
-  opacity: 0.1;
+  opacity: 0.05;
 }
 @keyframes featurePulse {
   0% {
-    opacity: 0.1;
+    opacity: 0.05;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.05;
   }
 }
 .mainContainer #jump {
