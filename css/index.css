@@ -186,24 +186,37 @@ p {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 12px 20px;
   border-radius: 5px;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 .mainContainer header .navBar nav a:hover {
-  color: white;
-  background-color: darkgrey;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 .mainContainer header .navBar nav .getStarted {
   background-color: #003e64;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+.mainContainer header .navBar nav .getStarted:hover {
+  background-color: #4a8d8d;
 }
 .mainContainer header .navBar nav .getStarted .fa-angle-double-up {
-  -webkit-animation: av_pulsate 2s infinite;
-  animation: av_pulsate 2s infinite;
+  -webkit-animation: arrowPulse 3s infinite;
+  animation: arrowPulse 3s infinite;
 }
-@keyframes av_pulsate {
+@keyframes arrowPulse {
   0% {
-    opacity: 0.05;
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0.1;
   }
 }
 .mainContainer .banner {
@@ -218,7 +231,7 @@ p {
 }
 .mainContainer .banner .bannerText {
   position: absolute;
-  width: 40%;
+  width: 43%;
   top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -267,14 +280,59 @@ p {
 .mainContainer .featureContainer .featurePanel .fa-bolt {
   color: #ffff96;
   margin-bottom: 10px;
+  -webkit-animation: featurePulse 10s infinite;
+  animation: featurePulse 10s infinite;
+  animation-delay: 0.5s;
+  opacity: 0.1;
+}
+@keyframes featurePulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
 }
 .mainContainer .featureContainer .featurePanel .fa-angle-double-up {
   color: lightcoral;
   margin-bottom: 10px;
+  -webkit-animation: featurePulse 10s infinite;
+  animation: featurePulse 10s infinite;
+  animation-delay: 1.5s;
+  opacity: 0.1;
+}
+@keyframes featurePulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
 }
 .mainContainer .featureContainer .featurePanel .fa-chart-bar {
   color: lightgreen;
   margin-bottom: 10px;
+  -webkit-animation: featurePulse 10s infinite;
+  animation: featurePulse 10s infinite;
+  animation-delay: 2.5s;
+  opacity: 0.1;
+}
+@keyframes featurePulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
 }
 .mainContainer #jump {
   width: 95%;
@@ -319,7 +377,7 @@ p {
 .mainContainer footer .footerBox {
   width: 33%;
   height: 100px;
-  padding: 40px;
+  padding: 40px 0;
 }
 .mainContainer footer .footerBox span {
   display: inline-block;
