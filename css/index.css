@@ -321,7 +321,7 @@ p {
   margin-bottom: 10px;
   -webkit-animation: featurePulse 10s infinite;
   animation: featurePulse 10s infinite;
-  animation-delay: 2.5s;
+  animation-delay: 2s;
   opacity: 0.05;
 }
 @keyframes featurePulse {
