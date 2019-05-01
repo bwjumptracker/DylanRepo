@@ -17,12 +17,13 @@ bannerBox.addEventListener('mouseleave', (event) => {
 
 // Mobile menu
 
+const header = document.querySelector("header");
 const mobileMenu = document.querySelector("#mobileMenu");
+const nav = document.querySelector(".navLinks");
+
 
 mobileMenu.addEventListener("click", (event) => {
     const nav = document.querySelector(".navLinks");
     nav.classList.toggle("activeMenu"); 
-
-    const header = document.querySelector("header");
     header.classList.toggle("adjustHeight"); 
 });

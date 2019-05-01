@@ -197,6 +197,7 @@ p {
   justify-content: space-evenly;
   align-items: center;
   margin-left: auto;
+  overflow: hidden;
   /* Navigation links */
   /* Start Here button with arrow animation */
 }
