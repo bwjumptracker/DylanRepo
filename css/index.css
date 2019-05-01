@@ -147,6 +147,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1800px;
   /* Header */
   /* Banner / Hero image */
   /* Features */
@@ -158,31 +159,58 @@ p {
   width: 100%;
   background-image: linear-gradient(45deg, #161222, #172a38);
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  height: 125px;
   /* Navigation bar */
 }
-.mainContainer header .navBar {
+@media (max-width: 825px) {
+  .mainContainer header {
+    flex-direction: column;
+  }
+}
+.mainContainer header .navHeader {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 150px;
+  height: 125px;
+  margin: auto 0;
+  min-height: 125px;
 }
-.mainContainer header .navBar h1 {
+.mainContainer header .navHeader h1 {
   margin-left: 50px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 200;
   font-style: italic;
 }
-.mainContainer header .navBar nav {
-  margin: auto 0;
+.mainContainer header .navHeader #mobileMenu {
+  margin: auto 30px auto auto;
+  display: none;
+}
+@media (max-width: 625px) {
+  .mainContainer header .navHeader #mobileMenu {
+    display: block;
+  }
+}
+.mainContainer header .navLinks {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
   margin-left: auto;
   /* Navigation links */
   /* Start Here button with arrow animation */
 }
-.mainContainer header .navBar nav a {
-  font-size: 1.2rem;
+@media (max-width: 825px) {
+  .mainContainer header .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.mainContainer header .navLinks a {
+  height: 30px;
   color: white;
   text-decoration: none;
-  margin: 0 30px;
   background-color: rgba(255, 255, 255, 0.05);
   padding: 12px 20px;
   border-radius: 5px;
@@ -191,20 +219,35 @@ p {
   -o-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
 }
-.mainContainer header .navBar nav a:hover {
+@media (max-width: 825px) {
+  .mainContainer header .navLinks a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0px;
+    border-radius: 0px;
+  }
+  .mainContainer header .navLinks a:nth-child(1) {
+    border-top: 2px solid white;
+  }
+}
+.mainContainer header .navLinks a:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
-.mainContainer header .navBar nav .getStarted {
+.mainContainer header .navLinks .getStarted {
   background-color: #003e64;
   -webkit-transition: background-color 0.25s ease-in-out;
   -moz-transition: background-color 0.25s ease-in-out;
   -o-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
 }
-.mainContainer header .navBar nav .getStarted:hover {
+.mainContainer header .navLinks .getStarted:hover {
   background-color: #4a8d8d;
 }
-.mainContainer header .navBar nav .getStarted .fa-angle-double-up {
+.mainContainer header .navLinks .getStarted .fa-angle-double-up {
   -webkit-animation: arrowPulse 3s infinite;
   animation: arrowPulse 3s infinite;
 }
@@ -219,6 +262,13 @@ p {
     opacity: 0.1;
   }
 }
+.mainContainer header .activeMenu {
+  display: flex;
+}
+.mainContainer .adjustHeight {
+  transition: all 0.25s ease-in-out;
+  height: 350px;
+}
 .mainContainer .banner {
   /* Temp background URL to work with github */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("https://raw.githubusercontent.com/bwjumptracker/DylanRepo/dylan-gosnell/img/bball.jpg");
@@ -227,19 +277,20 @@ p {
   background-size: 100% 100%;
   width: 100vw;
   height: 80vh;
+  max-width: 1800px;
   /* Text box */
 }
 .mainContainer .banner .bannerText {
-  position: absolute;
+  position: relative;
   width: 43%;
-  top: 46%;
+  top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   background: rgba(0, 0, 0, 0.2);
   padding: 35px 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .mainContainer .banner .bannerText h1 {
   margin: 25px 0;
@@ -257,9 +308,15 @@ p {
   margin: 40px 0;
   background: linear-gradient(to bottom, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
+  align-items: center;
   border-radius: 10px;
   /* Heading */
   /* Panels */
+}
+@media (max-width: 825px) {
+  .mainContainer .featureContainer {
+    flex-direction: column;
+  }
 }
 .mainContainer .featureContainer .featureHeading {
   width: 80%;
@@ -270,13 +327,18 @@ p {
   font-size: 2rem;
 }
 .mainContainer .featureContainer .featurePanel {
-  width: 25%;
+  width: 30%;
   height: 300px;
   margin: 30px 0;
-  padding: 30px 2%;
+  padding-top: 20px;
   text-align: center;
   background-color: #0f0f0f;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+@media (max-width: 825px) {
+  .mainContainer .featureContainer .featurePanel {
+    width: 95%;
+  }
 }
 .mainContainer .featureContainer .featurePanel .fa-bolt {
   color: yellow;
@@ -321,7 +383,7 @@ p {
   margin-bottom: 10px;
   -webkit-animation: featurePulse 10s infinite;
   animation: featurePulse 10s infinite;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
   opacity: 0.05;
 }
 @keyframes featurePulse {
@@ -343,12 +405,18 @@ p {
   width: 95%;
   display: flex;
   flex-wrap: wrap;
-  margin: 40px;
+  margin: 40px 0;
   background: linear-gradient(to top, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
+  align-items: center;
   border-radius: 10px;
   /* Heading */
   /* Panels */
+}
+@media (max-width: 825px) {
+  .mainContainer .testContainer {
+    flex-direction: column;
+  }
 }
 .mainContainer .testContainer .testHeading {
   width: 80%;
@@ -367,6 +435,11 @@ p {
   background-color: #0f0f0f;
   border-radius: 20px;
 }
+@media (max-width: 825px) {
+  .mainContainer .testContainer .testPanel {
+    width: 95%;
+  }
+}
 .mainContainer footer {
   width: 100%;
   height: 225px;
@@ -375,10 +448,20 @@ p {
   background-image: linear-gradient(45deg, #181425, #172a38);
   /* Footer container */
 }
+@media (max-width: 825px) {
+  .mainContainer footer {
+    flex-direction: column;
+  }
+}
 .mainContainer footer .footerBox {
   width: 33%;
   height: 100px;
   padding: 40px 0;
+}
+@media (max-width: 825px) {
+  .mainContainer footer .footerBox {
+    width: 95%;
+  }
 }
 .mainContainer footer .footerBox span {
   display: inline-block;
