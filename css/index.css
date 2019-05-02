@@ -448,6 +448,7 @@ p {
   display: flex;
   background-image: linear-gradient(45deg, #181425, #172a38);
   border-bottom: 20px solid black;
+  padding: 20px 0;
   /* Footer container */
 }
 @media (max-width: 700px) {
@@ -456,13 +457,12 @@ p {
   }
 }
 .mainContainer footer .footerBox {
-  width: 33%;
-  padding: 40px 0 40px 3%;
+  margin: 20px 0;
+  margin-left: 3%;
 }
 @media (max-width: 700px) {
   .mainContainer footer .footerBox {
-    width: 100%;
-    padding: 20px 0 40px 3%;
+    width: 90%;
   }
 }
 .mainContainer footer .footerBox span {
