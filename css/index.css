@@ -132,34 +132,38 @@ body {
   font-family: 'Gugi', cursive;
   letter-spacing: 1px;
   line-height: 30px;
-  font-size: 14px;
-}
-@media (min-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-}
-@media (min-width: 800px) {
-  body {
-    font-size: 18px;
-  }
-}
-@media (min-width: 1000px) {
-  body {
-    font-size: 20px;
-  }
 }
 h1 {
-  font-size: 2rem;
-  margin: 10px 0;
+  font-size: 1.8rem;
+  margin: 10px auto;
+  width: 98%;
 }
 @media (max-width: 700px) {
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
+hr {
+  width: 80%;
+  margin: 10px auto;
+  height: 5px;
+  background-color: #003e64;
+  border: none;
+  border-radius: 10px;
+}
 p {
-  font-size: 1.2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 700px) {
+  p {
+    font-size: 16px;
+  }
 }
 /* Main container */
 .mainContainer {
@@ -322,7 +326,7 @@ p {
   }
 }
 .mainContainer .banner .bannerText h1 {
-  margin: 25px 0;
+  margin: 25px auto;
   font-style: italic;
   letter-spacing: 8px;
 }
@@ -338,7 +342,8 @@ p {
   background: linear-gradient(to bottom, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 20px 0;
   /* Heading */
   /* Panels */
 }
@@ -348,8 +353,7 @@ p {
   }
 }
 .mainContainer .featureContainer .featureHeading {
-  width: 80%;
-  margin-top: 25px;
+  width: 90%;
   text-align: center;
 }
 .mainContainer .featureContainer .featureHeading h1 {
@@ -357,16 +361,17 @@ p {
 }
 .mainContainer .featureContainer .featurePanel {
   width: 30%;
-  height: 300px;
+  min-height: 400px;
   margin: 15px 0;
   padding: 20px 0;
   text-align: center;
   background-color: #0f0f0f;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 @media (max-width: 700px) {
   .mainContainer .featureContainer .featurePanel {
-    width: 95%;
+    width: 90%;
+    min-height: 300px;
   }
 }
 .mainContainer .featureContainer .featurePanel .fa-bolt {
@@ -435,10 +440,11 @@ p {
   display: flex;
   flex-wrap: wrap;
   margin: 20px 0;
+  padding: 20px 0;
   background: linear-gradient(to top, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
   /* Heading */
   /* Panels */
 }
@@ -449,7 +455,6 @@ p {
 }
 .mainContainer .testContainer .testHeading {
   width: 80%;
-  margin-top: 30px;
   text-align: center;
 }
 .mainContainer .testContainer .testHeading h1 {
@@ -457,16 +462,18 @@ p {
 }
 .mainContainer .testContainer .testPanel {
   width: 30%;
-  height: 300px;
+  min-height: 300px;
+  height: auto;
   margin: 15px 0;
   padding: 20px 0;
   text-align: center;
   background-color: #0f0f0f;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 @media (max-width: 700px) {
   .mainContainer .testContainer .testPanel {
-    width: 95%;
+    width: 90%;
+    min-height: 300px;
   }
 }
 .mainContainer footer {

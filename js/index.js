@@ -33,7 +33,7 @@ mobileMenu.addEventListener("click", (event) => {
 const media = window.matchMedia("(min-width: 700px)");
 
 media.addListener(mobileFix);
-mobileFix(mobile);
+mobileFix(media);
     
 function mobileFix(query) {
     if (query.matches) {
@@ -41,14 +41,3 @@ function mobileFix(query) {
         nav.classList.remove("activeMenu"); 
     }
 }
-    
-
-
-
-/*media.addListener(mobileFix)
-mobileFix()
-
-function mobileFix (media) {
-    let vari = (media.matches) ? header.classList.remove("adjustHeight")
-}
-//(media.matches) ? header.classList.remove("adjustHeight"));*/
