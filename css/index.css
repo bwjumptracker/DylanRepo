@@ -132,10 +132,31 @@ body {
   font-family: 'Gugi', cursive;
   letter-spacing: 1px;
   line-height: 30px;
+  font-size: 14px;
+}
+@media (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    font-size: 20px;
+  }
 }
 h1 {
   font-size: 2rem;
   margin: 10px 0;
+}
+@media (max-width: 700px) {
+  h1 {
+    font-size: 1.6rem;
+  }
 }
 p {
   font-size: 1.2rem;
@@ -183,7 +204,7 @@ p {
   font-style: italic;
 }
 .mainContainer header .navHeader #mobileMenu {
-  margin: auto 30px auto auto;
+  margin: auto 20px auto auto;
   display: none;
 }
 @media (max-width: 700px) {
@@ -215,7 +236,7 @@ p {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 8px 10px;
   border-radius: 5px;
-  margin: 0 5px;
+  margin-right: 10px;
   -webkit-transition: background-color 0.25s ease-in-out;
   -moz-transition: background-color 0.25s ease-in-out;
   -o-transition: background-color 0.25s ease-in-out;
@@ -231,6 +252,7 @@ p {
     width: 100%;
     padding: 12px 0px;
     border-radius: 0px;
+    margin-right: 0;
   }
   .mainContainer header .navLinks a:nth-child(1) {
     border-top: 2px solid white;
@@ -307,7 +329,7 @@ p {
   width: 95%;
   display: flex;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 20px 0;
   background: linear-gradient(to bottom, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
   align-items: center;
@@ -331,8 +353,8 @@ p {
 .mainContainer .featureContainer .featurePanel {
   width: 30%;
   height: 300px;
-  margin: 30px 0;
-  padding-top: 20px;
+  margin: 15px 0;
+  padding: 20px 0;
   text-align: center;
   background-color: #0f0f0f;
   border-radius: 20px;
@@ -407,7 +429,7 @@ p {
   width: 95%;
   display: flex;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 20px 0;
   background: linear-gradient(to top, #171d22 50%, #182923 100%);
   justify-content: space-evenly;
   align-items: center;
@@ -431,8 +453,8 @@ p {
 .mainContainer .testContainer .testPanel {
   width: 30%;
   height: 300px;
-  margin: 30px 0;
-  padding-top: 20px;
+  margin: 15px 0;
+  padding: 20px 0;
   text-align: center;
   background-color: #0f0f0f;
   border-radius: 20px;

@@ -27,3 +27,28 @@ mobileMenu.addEventListener("click", (event) => {
     nav.classList.toggle("activeMenu"); 
     header.classList.toggle("adjustHeight"); 
 });
+
+// fix for mobile menu height
+
+const media = window.matchMedia("(min-width: 700px)");
+
+media.addListener(mobileFix);
+mobileFix(mobile);
+    
+function mobileFix(query) {
+    if (query.matches) {
+        header.classList.remove("adjustHeight");
+        nav.classList.remove("activeMenu"); 
+    }
+}
+    
+
+
+
+/*media.addListener(mobileFix)
+mobileFix()
+
+function mobileFix (media) {
+    let vari = (media.matches) ? header.classList.remove("adjustHeight")
+}
+//(media.matches) ? header.classList.remove("adjustHeight"));*/
