@@ -145,14 +145,14 @@ h1 {
 }
 hr {
   width: 80%;
-  margin: 10px auto;
+  margin: 20px auto;
   height: 5px;
   background-color: #003e64;
   border: none;
   border-radius: 10px;
 }
 p {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 @media (min-width: 700px) {
@@ -177,7 +177,7 @@ p {
   /* Banner / Hero image */
   /* Features */
   /* Jump image */
-  /* Testimonials */
+  /* Reviews */
   /* Footer */
 }
 .mainContainer header {
@@ -257,6 +257,7 @@ p {
     padding: 12px 0px;
     border-radius: 0px;
     margin-right: 0;
+    background-color: rgba(255, 255, 255, 0);
   }
   .mainContainer header .navLinks a:nth-child(1) {
     border-top: 2px solid white;
@@ -436,7 +437,7 @@ p {
   width: 95%;
   height: 300px;
 }
-.mainContainer .testContainer {
+.mainContainer .reviewContainer {
   width: 95%;
   display: flex;
   flex-wrap: wrap;
@@ -450,18 +451,18 @@ p {
   /* Panels */
 }
 @media (max-width: 700px) {
-  .mainContainer .testContainer {
+  .mainContainer .reviewContainer {
     flex-direction: column;
   }
 }
-.mainContainer .testContainer .testHeading {
+.mainContainer .reviewContainer .reviewHeading {
   width: 80%;
   text-align: center;
 }
-.mainContainer .testContainer .testHeading h1 {
+.mainContainer .reviewContainer .reviewHeading h1 {
   font-size: 2rem;
 }
-.mainContainer .testContainer .testPanel {
+.mainContainer .reviewContainer .reviewPanel {
   width: 30%;
   min-height: 300px;
   height: auto;
@@ -472,7 +473,7 @@ p {
   border-radius: 10px;
 }
 @media (max-width: 700px) {
-  .mainContainer .testContainer .testPanel {
+  .mainContainer .reviewContainer .reviewPanel {
     width: 90%;
     min-height: 300px;
   }
@@ -494,6 +495,7 @@ p {
 .mainContainer footer .footerBox {
   margin: 20px 0;
   margin-left: 3%;
+  margin-right: 10%;
 }
 @media (max-width: 700px) {
   .mainContainer footer .footerBox {

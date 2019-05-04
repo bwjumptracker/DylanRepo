@@ -41,3 +41,63 @@ function mobileFix(query) {
         nav.classList.remove("activeMenu"); 
     }
 }
+
+// Review stars
+
+class StarSelect {
+    constructor(star){
+
+        // Star selected
+        this.star = star;
+
+        // Match star selected to star review panels
+        this.starData = this.star.dataset.stars; 
+        this.panels = document.querySelectorAll(`.reviewPanel[data-stars='${this.starData}']`);
+
+        // create new panel objects using the StarPanel constructor
+        this.panels = Array.from(this.panels).map(panel => panel = new StarPanel(panel));
+
+        // Event for selecting star review shown
+        this.star.addEventListener("click", _ => this.selectStar());
+    }
+  
+    selectStar(){
+
+        // Select all StarSelect objects and remove starSelected
+        const stars = document.querySelectorAll(".stars");
+        stars.forEach(star => star.classList.remove('starSelected'));
+
+        // Select all reviewPanels and hide them
+        const panels = document.querySelectorAll(".reviewPanel");
+        panels.forEach(panel => panel.style.display = "none");
+
+        // Select clicked StarSelect object
+        this.star.classList.add("starSelected");
+
+        // Select panels that correspond with the star selected
+        this.panels.forEach(panel => panel.selectPanel());
+    }
+}
+  
+class StarPanel {
+    constructor(panel){
+    
+        // select this review panel
+        this.panel = panel;
+
+        // Select the starContainer contained within the review panel
+        const starContainer = this.panel.querySelector(".starContainer")
+        
+        // Loop x amount of times and add a star for every star in the stars dataset 
+        for (let i = 0 ; i < this.panel.dataset.stars ; i++ ) {
+            starContainer.innerHTML += '<i class="far fa-star"></i>';
+        }
+    }
+
+    selectPanel(){
+        this.panel.style.display = "inline-block";
+    }
+  }
+
+document.querySelectorAll(".stars").forEach(star => star = new StarSelect(star));
+
