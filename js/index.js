@@ -52,7 +52,8 @@ class StarSelect {
 
         // Match star selected to star review panels
         this.starData = this.star.dataset.stars; 
-        this.panels = document.querySelectorAll(`.reviewPanel[data-stars='${this.starData}']`);
+        
+        this.panels = (this.starData === "all") ? document.querySelectorAll(".reviewPanel") : document.querySelectorAll(`.reviewPanel[data-stars='${this.starData}']`);
 
         // create new panel objects using the StarPanel constructor
         this.panels = Array.from(this.panels).map(panel => panel = new StarPanel(panel));
@@ -62,7 +63,6 @@ class StarSelect {
     }
   
     selectStar(){
-
 
         // Select all StarSelect objects
         const stars = document.querySelectorAll(".stars");
@@ -74,11 +74,17 @@ class StarSelect {
         });
 
         // Loop through the stars up to the star selected and change color to goldenrod.
-        for(let i = 1; i <= this.starData ; i++) {
-            let starSelected = document.querySelectorAll(`.stars[data-stars='${i}']`);
-            starSelected.forEach(selection => selection.style.color = "goldenrod")
+        if (this.starData === "all") {
+            let AllstarSelected = document.querySelectorAll(".stars");
+            AllstarSelected.forEach(selection => selection.style.color = "goldenrod");
+            }
+        else {
+            for(let i = 1; i <= this.starData ; i++) {
+                let starSelected = document.querySelector(`.stars[data-stars='${i}']`);
+                starSelected.style.color = "goldenrod";
+            }
         }
-        
+
         // Select all reviewPanels and hide them
         const panels = document.querySelectorAll(".reviewPanel");
         panels.forEach(panel => panel.style.display = "none");
@@ -93,17 +99,9 @@ class StarSelect {
   
 class StarPanel {
     constructor(panel){
-    
+
         // select this review panel
         this.panel = panel;
-
-        // Select the starContainer contained within the review panel
-        const starContainer = this.panel.querySelector(".starContainer")
-        
-        // Loop x amount of times and add a star for every star in the stars dataset 
-        for (let i = 0 ; i < this.panel.dataset.stars ; i++ ) {
-            starContainer.innerHTML += '<i class="fas fa-star"></i>';
-        }
     }
 
     selectPanel(){
@@ -111,5 +109,30 @@ class StarPanel {
     }
   }
 
-document.querySelectorAll(".stars").forEach(star => star = new StarSelect(star));
+// Select all stars class
+constructedStars = document.querySelectorAll(".stars")
 
+// Loop through .stars elements and construct selector components
+constructedStars.forEach(star => {
+
+    star = new StarSelect(star)
+
+    // Select 4 stars panels by default
+    if (star.starData === "4") {
+        star.selectStar();
+    }
+
+    return star;
+});
+
+// Add review stars to review panels based on dataset.stars variable
+document.querySelectorAll(".reviewPanel").forEach(panel => {
+    const stars = panel.dataset.stars;
+    const starContainer = panel.querySelector(".starContainer")
+
+    if( panel.dataset.stars != "all") {
+        for (let i = 0 ; i < panel.dataset.stars ; i++ ) {
+            starContainer.innerHTML += '<i class="fas fa-star"></i>';
+        }
+    }
+});

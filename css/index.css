@@ -448,7 +448,6 @@ p {
   align-items: center;
   border-radius: 5px;
   /* Heading */
-  /* Review stars */
   /* Panels */
 }
 @media (max-width: 700px) {
@@ -459,25 +458,35 @@ p {
 .mainContainer .reviewContainer .reviewHeading {
   width: 80%;
   text-align: center;
+  /* Review stars */
 }
 .mainContainer .reviewContainer .reviewHeading h1 {
   font-size: 2rem;
 }
-.mainContainer .reviewContainer .starsSelected {
+.mainContainer .reviewContainer .reviewHeading .starsSelector {
   margin: 15px auto;
-  width: 250px;
-  background-color: rgba(255, 255, 255, 0.05);
+  width: 300px;
+  height: 105px;
+  background-color: rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 10px 0;
 }
 @media (max-width: 300px) {
-  .mainContainer .reviewContainer .starsSelected {
+  .mainContainer .reviewContainer .reviewHeading .starsSelector {
     width: 95%;
   }
 }
-.mainContainer .reviewContainer .starsSelected .stars {
+.mainContainer .reviewContainer .reviewHeading .starsSelector .stars {
   color: goldenrod;
-  margin: 10px 5px;
+  padding: 8px;
+  margin: 10px 0;
+}
+.mainContainer .reviewContainer .reviewHeading .starsSelector .fa-star {
+  padding: 10px 10px 12px 11px;
+}
+.mainContainer .reviewContainer .reviewHeading .starSelected {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 .mainContainer .reviewContainer .reviewPanel {
   width: 30%;
