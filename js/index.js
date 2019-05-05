@@ -63,10 +63,22 @@ class StarSelect {
   
     selectStar(){
 
-        // Select all StarSelect objects and remove starSelected
-        const stars = document.querySelectorAll(".stars");
-        stars.forEach(star => star.classList.remove('starSelected'));
 
+        // Select all StarSelect objects
+        const stars = document.querySelectorAll(".stars");
+        
+        // remove starSelected and change color to darkgrey when not selected
+        stars.forEach(star => {
+             star.classList.remove('starSelected');
+             star.style.color = "darkgrey";
+        });
+
+        // Loop through the stars up to the star selected and change color to goldenrod.
+        for(let i = 1; i <= this.starData ; i++) {
+            let starSelected = document.querySelectorAll(`.stars[data-stars='${i}']`);
+            starSelected.forEach(selection => selection.style.color = "goldenrod")
+        }
+        
         // Select all reviewPanels and hide them
         const panels = document.querySelectorAll(".reviewPanel");
         panels.forEach(panel => panel.style.display = "none");
@@ -90,7 +102,7 @@ class StarPanel {
         
         // Loop x amount of times and add a star for every star in the stars dataset 
         for (let i = 0 ; i < this.panel.dataset.stars ; i++ ) {
-            starContainer.innerHTML += '<i class="far fa-star"></i>';
+            starContainer.innerHTML += '<i class="fas fa-star"></i>';
         }
     }
 

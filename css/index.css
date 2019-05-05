@@ -448,6 +448,7 @@ p {
   align-items: center;
   border-radius: 5px;
   /* Heading */
+  /* Review stars */
   /* Panels */
 }
 @media (max-width: 700px) {
@@ -462,6 +463,22 @@ p {
 .mainContainer .reviewContainer .reviewHeading h1 {
   font-size: 2rem;
 }
+.mainContainer .reviewContainer .starsSelected {
+  margin: 15px auto;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px 0;
+}
+@media (max-width: 300px) {
+  .mainContainer .reviewContainer .starsSelected {
+    width: 95%;
+  }
+}
+.mainContainer .reviewContainer .starsSelected .stars {
+  color: goldenrod;
+  margin: 10px 5px;
+}
 .mainContainer .reviewContainer .reviewPanel {
   width: 30%;
   min-height: 300px;
@@ -471,6 +488,9 @@ p {
   text-align: center;
   background-color: #0f0f0f;
   border-radius: 10px;
+}
+.mainContainer .reviewContainer .reviewPanel .starContainer {
+  color: goldenrod;
 }
 @media (max-width: 700px) {
   .mainContainer .reviewContainer .reviewPanel {
