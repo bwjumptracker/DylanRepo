@@ -459,7 +459,7 @@ p {
   }
 }
 .mainContainer .reviewContainer .reviewHeading {
-  width: 80%;
+  width: 90%;
   text-align: center;
   /* Review stars */
 }
@@ -468,22 +468,16 @@ p {
 }
 .mainContainer .reviewContainer .reviewHeading .starsSelector {
   margin: 15px auto;
-  width: 300px;
+  max-width: 300px;
   height: 105px;
   background-color: rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 10px 0;
-  overflow: hidden;
-}
-@media (max-width: 300px) {
-  .mainContainer .reviewContainer .reviewHeading .starsSelector {
-    width: 95%;
-  }
 }
 .mainContainer .reviewContainer .reviewHeading .starsSelector .stars {
   color: goldenrod;
-  padding: 8px;
   margin: 10px 0;
+  padding: 8px;
 }
 .mainContainer .reviewContainer .reviewHeading .starsSelector .fa-star {
   padding: 10px 10px 12px 11px;
@@ -538,7 +532,7 @@ p {
 .mainContainer footer .footerBox {
   margin: 20px 0;
   margin-left: 3%;
-  margin-right: 10%;
+  margin-right: 6%;
 }
 @media (max-width: 700px) {
   .mainContainer footer .footerBox {

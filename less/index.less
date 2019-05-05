@@ -359,7 +359,6 @@ p {
         flex-wrap: wrap;
         margin: 20px 0;
         padding: 20px 0;
-        
         background: linear-gradient(to top, rgb(23, 29, 34) 50%,rgb(24, 41, 35) 100%);
         justify-content: space-evenly;
         border-radius: 5px;
@@ -371,7 +370,7 @@ p {
 
         /* Heading */
         .reviewHeading {
-            width: 80%;
+            width: 90%;
             text-align: center;
 
             h1 {
@@ -382,21 +381,16 @@ p {
 
             .starsSelector {
                 margin: 15px auto;
-                width: 300px;
+                max-width: 300px;
                 height: 105px;
                 background-color: rgba(0,0,0,0.25);
                 border-radius: 10px;
                 padding: 10px 0;
-                overflow: hidden;
 
-                @media( max-width: 300px ) {
-                    width: 95%;
-                }
-                
                 .stars {
                     color: goldenrod;
-                    padding: 8px;
                     margin: 10px 0;
+                    padding: 8px;
                 }
 
                 .fa-star {
@@ -460,7 +454,7 @@ p {
         .footerBox {
             margin: 20px 0;
             margin-left: 3%;
-            margin-right: 10%;
+            margin-right: 6%;
 
             @media( max-width: 700px ) {
                 width: 90%;
