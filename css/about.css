@@ -192,6 +192,10 @@ header .navHeader {
   margin: auto 0;
   min-height: 125px;
 }
+header .navHeader a {
+  text-decoration: none;
+  color: white;
+}
 header .navHeader h1 {
   margin-left: 40px;
   font-size: 1.8rem;
