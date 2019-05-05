@@ -1,0 +1,92 @@
+// Compartmentalized formatting, header, and footer less files for reusability.
+@import "formatting.less";
+@import "header.less";
+@import "footer.less";
+
+/* Main container */
+
+.mainContainer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1800px;
+
+    /* Features */
+    .aboutContainer {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        background: linear-gradient(to bottom, rgb(24, 36, 46) 50%,rgb(41, 73, 62) 100%);
+        justify-content: space-evenly;
+        border-radius: 5px;
+        padding: 20px 0;
+
+        @media( max-width: 700px ) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Heading */
+        .aboutHeading {
+            width: 90%;
+            text-align: center;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        /* About panels */
+        .aboutPanel {
+            width: 30%;
+            min-height: 400px;
+            margin: 15px 0;
+            padding: 20px 0;
+
+            text-align: center;
+            background-color: rgb(15, 15, 15);
+            border-radius: 10px;
+
+            @media( max-width: 700px ) {
+                width: 90%;
+                min-height: 300px;
+            }
+
+            h1 {
+                width: 90%;
+            }
+
+            h2 {
+                width: 90%;
+            }
+
+            img {
+                width: 150px;
+                border-radius: 20px;
+                border: 2.5px solid rgb(74, 141, 141,);
+                margin-top: 15px;
+                .anim();
+            }
+
+            .anim() {
+                -webkit-animation: aboutPulse 5s infinite; 
+                animation: aboutPulse 5s infinite;
+                
+                @keyframes aboutPulse {
+                    0%      {box-shadow: 0px 0px 5px 5px rgba(0, 62, 100, 0.05);};
+                        
+                    50%     {box-shadow: 0px 0px 10px 5px rgba(0, 62, 100, 1);};
+                        
+                    100%    {box-shadow: 0px 0px 5px 5px rgba(0, 62, 100, 0.05);};
+                }
+            }
+        }
+    }
+
+
+
+
+
+}

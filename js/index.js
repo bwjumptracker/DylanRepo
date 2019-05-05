@@ -15,33 +15,6 @@ bannerBox.addEventListener('mouseleave', (event) => {
     event.stopPropagation();
 });
 
-// Mobile menu
-
-const header = document.querySelector("header");
-const mobileMenu = document.querySelector("#mobileMenu");
-const nav = document.querySelector(".navLinks");
-
-
-mobileMenu.addEventListener("click", (event) => {
-    const nav = document.querySelector(".navLinks");
-    header.style.transition = "all 0.25s ease-in-out";
-    header.classList.toggle("adjustHeight"); 
-});
-
-// fix for mobile menu height
-
-const media = window.matchMedia("(min-width: 700px)");
-
-media.addListener(mobileFix);
-mobileFix(media);
-    
-function mobileFix(query) {
-    if (query.matches) {
-        header.classList.remove("adjustHeight");
-        nav.classList.remove("activeMenu"); 
-    }
-}
-
 // Review stars
 
 class StarSelect {
@@ -107,7 +80,7 @@ class StarPanel {
     selectPanel(){
         this.panel.style.display = "inline-block";
     }
-  }
+}
 
 // Select all stars class
 constructedStars = document.querySelectorAll(".stars")
@@ -125,14 +98,14 @@ constructedStars.forEach(star => {
     return star;
 });
 
-// Add review stars to review panels based on dataset.stars variable
+// Add review stars to review panels
 document.querySelectorAll(".reviewPanel").forEach(panel => {
     const stars = panel.dataset.stars;
     const starContainer = panel.querySelector(".starContainer")
 
-    if( panel.dataset.stars != "all") {
-        for (let i = 0 ; i < panel.dataset.stars ; i++ ) {
+    // Add a star for every star in dataset.stars
+    for (let i = 0 ; i < panel.dataset.stars ; i++ ) {
             starContainer.innerHTML += '<i class="fas fa-star"></i>';
-        }
     }
+    
 });
