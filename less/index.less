@@ -87,6 +87,10 @@ p {
     }
 }
 
+// Compartmentalized header and footer less files for reusability
+@import "header.less";
+@import "footer.less";
+
 /* Main container */
 
 .mainContainer {
@@ -96,134 +100,6 @@ p {
     flex-direction: column;
     align-items: center;
     max-width: 1800px;
-
-    /* Header */
-    header {
-        width: 100%;
-        background-image: linear-gradient(45deg,rgb(22, 18, 34),rgb(23, 42, 56));
-        margin-bottom: 10px;
-        display: flex;
-        flex-direction: row;
-        height: 125px;
-
-        @media( max-width: 700px ) {
-            flex-direction: column;
-        }
-        
-        /* Navigation bar */
-        .navHeader {
-            display: flex;
-            align-items: center;
-            height: 125px;
-            margin: auto 0;
-            min-height: 125px;
-
-
-            h1 {
-                margin-left: 40px;
-                font-size: 1.8rem;
-                font-weight: 200;
-                font-style: italic;
-                min-width: 210px;
-
-            }
-
-            #mobileMenu {
-                margin: auto 20px auto auto;
-                display: none;
-
-                @media( max-width: 700px ) {
-                    display: block;
-                }
-            }
-        }
-        
-
-        .navLinks {
-            display: flex;
-            width: 66%;
-            justify-content: space-evenly;
-            align-items: center;
-            margin-left: auto;
-            overflow: hidden;
-
-            @media( max-width: 700px ) {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
-
-                /* Navigation links */
-            a {
-                height: 30px;
-                color: white;
-                text-decoration: none;
-                background-color: rgba(255, 255, 255, 0.05);
-                padding: 8px 2%;
-                border-radius: 5px;
-                margin-right: 10px;
-                -webkit-transition:background-color 0.25s ease-in-out;
-                -moz-transition:background-color 0.25s ease-in-out;
-                -o-transition:background-color 0.25s ease-in-out;
-                transition:background-color 0.25s ease-in-out;
-
-                @media( max-width: 700px ) {
-                    color: white;
-                    text-decoration: none;
-                    border-bottom: 2px solid white;
-                    justify-content: space-evenly;
-                    text-align: center;
-                    width: 100%;
-                    padding: 12px 0px;
-                    border-radius: 0px;
-                    margin-right: 0;
-                    background-color: rgba(255, 255, 255, 0);
-
-                    &:nth-child(1) {
-                        border-top: 2px solid white;
-                    }
-                    
-                }
-
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0.25);
-                }
-            }
-
-            /* Start Here button with arrow animation */
-            .getStarted {
-                background-color: rgb(0, 62, 100);
-                -webkit-transition:background-color 0.25s ease-in-out;
-                -moz-transition:background-color 0.25s ease-in-out;
-                -o-transition:background-color 0.25s ease-in-out;
-                transition:background-color 0.25s ease-in-out;
-
-                &:hover {
-                    background-color: rgb(74, 141, 141);
-                }
-
-                .fa-angle-double-up {
-                    -webkit-animation: arrowPulse 3s infinite; 
-                    animation: arrowPulse 3s infinite;
-                }
-                      
-                @keyframes arrowPulse {
-                    0%      {opacity: 0.1;};
-                    50%     {opacity: 1;};
-                    100%    {opacity: 0.1;};
-                }
-            }
-        }
-
-        .activeMenu {
-            display: flex;
-        }
-    }
-
-    .adjustHeight {
-        transition: all 0.25s ease-in-out;
-        height: 350px;
-    }
 
     /* Banner / Hero image */
     .banner {
@@ -434,47 +310,6 @@ p {
 
             @media( min-width: 850px ) {
                 min-height: 250px;
-            }
-        }
-    }
-
-    /* Footer */
-    footer {
-        width: 100%;
-        background-color: black;
-        display: flex;
-        background-image: linear-gradient(45deg,rgb(24, 20, 37),rgb(23, 42, 56));
-        border-bottom: 20px solid black;
-        padding: 20px 0;
-
-        @media( max-width: 700px ) {
-            flex-direction: column;
-        }
-
-        /* Footer container */
-        .footerBox {
-            margin: 20px 0;
-            margin-left: 3%;
-            margin-right: 6%;
-
-            @media( max-width: 700px ) {
-                width: 90%;
-            }
-            
-            span { 
-                display: inline-block;
-                margin-bottom: 20px;
-                padding-bottom: 10px;
-                font-size: 2rem;
-                border-bottom: 5px solid rgb(0, 62, 100);
-            }
-            
-            .fab {
-                margin-right: 20px;
-            }
-
-            a {
-                color: white;
             }
         }
     }

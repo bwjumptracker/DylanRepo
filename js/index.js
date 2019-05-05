@@ -24,7 +24,7 @@ const nav = document.querySelector(".navLinks");
 
 mobileMenu.addEventListener("click", (event) => {
     const nav = document.querySelector(".navLinks");
-    nav.classList.toggle("activeMenu"); 
+    header.style.transition = "all 0.25s ease-in-out";
     header.classList.toggle("adjustHeight"); 
 });
 
@@ -75,8 +75,8 @@ class StarSelect {
 
         // Loop through the stars up to the star selected and change color to goldenrod.
         if (this.starData === "all") {
-            let AllstarSelected = document.querySelectorAll(".stars");
-            AllstarSelected.forEach(selection => selection.style.color = "goldenrod");
+            const AllstarsSelected = document.querySelectorAll(".stars");
+            AllstarsSelected.forEach(selection => selection.style.color = "goldenrod");
             }
         else {
             for(let i = 1; i <= this.starData ; i++) {
@@ -99,7 +99,7 @@ class StarSelect {
   
 class StarPanel {
     constructor(panel){
-
+        
         // select this review panel
         this.panel = panel;
     }
