@@ -137,6 +137,7 @@ h1 {
   font-size: 1.8rem;
   margin: 10px auto;
   width: 98%;
+  text-align: center;
 }
 @media (max-width: 700px) {
   h1 {
@@ -145,7 +146,7 @@ h1 {
 }
 h2 {
   font-size: 1.2rem;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 90%;
 }
 hr {
@@ -195,13 +196,13 @@ header .navHeader {
 header .navHeader a {
   text-decoration: none;
   color: white;
+  margin-left: 10px;
+  min-width: 220px;
 }
 header .navHeader h1 {
-  margin-left: 40px;
   font-size: 1.8rem;
   font-weight: 200;
   font-style: italic;
-  min-width: 210px;
 }
 header .navHeader #mobileMenu {
   margin: auto 20px auto auto;
