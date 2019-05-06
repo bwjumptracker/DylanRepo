@@ -196,13 +196,13 @@ header .navHeader {
 header .navHeader a {
   text-decoration: none;
   color: white;
+  margin-left: 10px;
+  min-width: 220px;
 }
 header .navHeader h1 {
-  margin-left: 40px;
   font-size: 1.8rem;
   font-weight: 200;
   font-style: italic;
-  min-width: 210px;
 }
 header .navHeader #mobileMenu {
   margin: auto 20px auto auto;
