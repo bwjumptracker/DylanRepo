@@ -1,0 +1,231 @@
+// Compartmentalized formatting, header, and footer less files for reusability.
+@import "formatting.less";
+@import "header.less";
+@import "footer.less";
+
+/* Main container */
+
+.mainContainer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1800px;
+
+    /* Banner / Hero image */
+    .banner {
+        /* Temp background URL to work with github */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("https://raw.githubusercontent.com/bwjumptracker/DylanRepo/dylan-gosnell/img/bball.jpg");
+        background-repeat: no-repeat;
+        text-align: center;
+        background-size: 100% 100%;
+        width: 100vw;
+        height: 80vh;
+        max-width: 1800px;
+
+        /* Text box */
+        .bannerText {
+            position: relative;
+            width: 43%;
+            top: 28%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 35px 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.50);
+
+            @media( max-width: 700px ) {
+                top: 36%;
+                width: 60%;
+            }
+
+            h1 {
+                margin: 25px auto;
+                font-style: italic;
+                letter-spacing: 8px;
+            }
+
+            p {
+                font-style: italic;
+                margin: 25px 0;
+            }
+        }
+    }
+
+    /* Features */
+    .featureContainer {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        background: linear-gradient(to bottom, rgb(23, 29, 34) 50%,rgb(24, 41, 35) 100%);
+        justify-content: space-evenly;
+        border-radius: 5px;
+        padding: 20px 0;
+
+        @media( max-width: 700px ) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Heading */
+        .featureHeading {
+            width: 90%;
+            text-align: center;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        /* Panels */
+        .featurePanel {
+            width: 30%;
+            min-height: 400px;
+            margin: 15px 0;
+            padding: 20px 0;
+
+            text-align: center;
+            background-color: rgb(15, 15, 15);
+            border-radius: 10px;
+
+            @media( max-width: 700px ) {
+                width: 90%;
+                min-height: 300px;
+            }
+
+            h1 {
+                width: 90%;
+            }
+
+            .anim (@delay) {
+                -webkit-animation: featurePulse 10s infinite; 
+                animation: featurePulse 10s infinite;
+                animation-delay: @delay;
+                opacity: 0.05;
+                
+                @keyframes featurePulse {
+                    0%      {opacity: 0.05;};
+                        
+                    50%     {opacity: 1;};
+                        
+                    100%    {opacity: 0.05;};
+                }
+            }
+
+            .fa-bolt {
+                color: yellow;
+                margin-bottom: 10px;
+                .anim(0.5s);
+            }
+
+            .fa-angle-double-up {
+                color: red;
+                margin-bottom: 10px;
+                .anim(1.5s);
+            }
+
+            .fa-chart-bar {
+                color: rgb(0, 255, 0);
+                margin-bottom: 10px;
+                .anim(2.5s);
+            }
+        }
+    }
+
+    /* Jump image */
+    #jump {
+        width: 95%;
+        height: 300px;
+    }
+
+    /* Reviews */
+    .reviewContainer {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        padding: 20px 0;
+        background: linear-gradient(to top, rgb(23, 29, 34) 70%,rgb(24, 41, 35) 100%);
+        justify-content: space-evenly;
+        border-radius: 5px;
+
+        @media( max-width: 700px ) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Heading */
+        .reviewHeading {
+            width: 90%;
+            text-align: center;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            /* Review stars */
+
+            .starsSelector {
+                margin: 15px auto;
+                max-width: 300px;
+                height: 105px;
+                background-color: rgba(0,0,0,0.25);
+                border-radius: 10px;
+                padding: 10px 0;
+
+                .stars {
+                    color: goldenrod;
+                    margin: 10px 0;
+                    padding: 8px;
+                }
+
+                .fa-star {
+                    padding: 10px 10px 12px 11px;
+                }
+
+            }
+
+            .starSelected {
+                background-color: rgba(0,0,0,0.25);
+                border-radius: 10px;
+            }
+        }
+
+        /* Panels */
+        .reviewPanel {
+            width: 28%;
+            min-height: 250px;
+            margin: 15px auto;
+            padding: 15px 0;
+            text-align: center;
+            background-color: rgb(15, 15, 15);
+            border-radius: 10px;
+
+            @media( max-width: 700px ) {
+                min-height: 200px;
+            }
+
+            h1 {
+                width: 90%;
+                height: 50px;
+                padding-top: 10px;
+                text-align: center;
+
+                @media( max-width: 700px ) {
+                    height: 40px;
+                }
+            }
+
+            .starContainer {
+                color: goldenrod;
+            }
+
+            @media( max-width: 700px ) {
+                width: 90%;
+            }
+        }
+    }
+}

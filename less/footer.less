@@ -1,0 +1,40 @@
+/* Footer */
+footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    background-image: linear-gradient(45deg,rgb(24, 20, 37),rgb(23, 42, 56));
+    border-bottom: 20px solid black;
+    padding: 20px 0;
+
+    @media( max-width: 700px ) {
+        flex-direction: column;
+    }
+
+    /* Footer container */
+    .footerBox {
+        margin: 20px 0;
+        margin-left: 3%;
+        margin-right: 6%;
+
+        @media( max-width: 700px ) {
+            width: 90%;
+        }
+        
+        span { 
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-size: 2rem;
+            border-bottom: 5px solid rgb(0, 62, 100);
+        }
+        
+        .fab {
+            margin-right: 20px;
+        }
+
+        a {
+            color: white;
+        }
+    }
+}

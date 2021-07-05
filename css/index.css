@@ -1,0 +1,565 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: #0a0a0a;
+  color: white;
+  font-family: 'Gugi', cursive;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+h1 {
+  font-size: 1.8rem;
+  margin: 10px auto;
+  width: 98%;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+h2 {
+  font-size: 1.2rem;
+  margin: 10px auto;
+  width: 90%;
+}
+hr {
+  width: 80%;
+  margin: 20px auto;
+  height: 5px;
+  background-color: #003e64;
+  border: none;
+  border-radius: 10px;
+}
+p {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 700px) {
+  p {
+    font-size: 16px;
+  }
+}
+/* Header */
+header {
+  width: 100%;
+  background-image: linear-gradient(45deg, #161222, #172a38);
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 125px;
+  /* Navigation bar */
+}
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+}
+header .navHeader {
+  display: flex;
+  align-items: center;
+  height: 125px;
+  margin: auto 0;
+  min-height: 125px;
+}
+header .navHeader a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  min-width: 220px;
+}
+header .navHeader h1 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  font-style: italic;
+}
+header .navHeader #mobileMenu {
+  margin: auto 20px auto auto;
+  display: none;
+}
+@media (max-width: 700px) {
+  header .navHeader #mobileMenu {
+    display: block;
+  }
+}
+header .navLinks {
+  display: flex;
+  width: 66%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: auto;
+  overflow: hidden;
+  /* Navigation links */
+  /* Start Here button with arrow animation */
+}
+@media (max-width: 700px) {
+  header .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+header .navLinks a {
+  height: 30px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px 2%;
+  border-radius: 5px;
+  margin-right: 10px;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+@media (max-width: 700px) {
+  header .navLinks a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0px;
+    border-radius: 0px;
+    margin-right: 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  header .navLinks a:nth-child(1) {
+    border-top: 2px solid white;
+  }
+}
+header .navLinks a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+header .navLinks .getStarted {
+  background-color: #003e64;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+header .navLinks .getStarted:hover {
+  background-color: #4a8d8d;
+}
+header .navLinks .getStarted .fa-angle-double-up {
+  -webkit-animation: arrowPulse 3s infinite;
+  animation: arrowPulse 3s infinite;
+}
+@keyframes arrowPulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.adjustHeight {
+  height: 350px;
+}
+/* Footer */
+footer {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  background-image: linear-gradient(45deg, #181425, #172a38);
+  border-bottom: 20px solid black;
+  padding: 20px 0;
+  /* Footer container */
+}
+@media (max-width: 700px) {
+  footer {
+    flex-direction: column;
+  }
+}
+footer .footerBox {
+  margin: 20px 0;
+  margin-left: 3%;
+  margin-right: 6%;
+}
+@media (max-width: 700px) {
+  footer .footerBox {
+    width: 90%;
+  }
+}
+footer .footerBox span {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 2rem;
+  border-bottom: 5px solid #003e64;
+}
+footer .footerBox .fab {
+  margin-right: 20px;
+}
+footer .footerBox a {
+  color: white;
+}
+/* Main container */
+.mainContainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1800px;
+  /* Banner / Hero image */
+  /* Features */
+  /* Jump image */
+  /* Reviews */
+}
+.mainContainer .banner {
+  /* Temp background URL to work with github */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("https://raw.githubusercontent.com/bwjumptracker/DylanRepo/dylan-gosnell/img/bball.jpg");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 80vh;
+  max-width: 1800px;
+  /* Text box */
+}
+.mainContainer .banner .bannerText {
+  position: relative;
+  width: 43%;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 35px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 700px) {
+  .mainContainer .banner .bannerText {
+    top: 36%;
+    width: 60%;
+  }
+}
+.mainContainer .banner .bannerText h1 {
+  margin: 25px auto;
+  font-style: italic;
+  letter-spacing: 8px;
+}
+.mainContainer .banner .bannerText p {
+  font-style: italic;
+  margin: 25px 0;
+}
+.mainContainer .featureContainer {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  background: linear-gradient(to bottom, #171d22 50%, #182923 100%);
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 0;
+  /* Heading */
+  /* Panels */
+}
+@media (max-width: 700px) {
+  .mainContainer .featureContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.mainContainer .featureContainer .featureHeading {
+  width: 90%;
+  text-align: center;
+}
+.mainContainer .featureContainer .featureHeading h1 {
+  font-size: 2rem;
+}
+.mainContainer .featureContainer .featurePanel {
+  width: 30%;
+  min-height: 400px;
+  margin: 15px 0;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .mainContainer .featureContainer .featurePanel {
+    width: 90%;
+    min-height: 300px;
+  }
+}
+.mainContainer .featureContainer .featurePanel h1 {
+  width: 90%;
+}
+.mainContainer .featureContainer .featurePanel .fa-bolt {
+  color: yellow;
+  margin-bottom: 10px;
+  -webkit-animation: featurePulse 10s infinite;
+  animation: featurePulse 10s infinite;
+  animation-delay: 0.5s;
+  opacity: 0.05;
+}
+@keyframes featurePulse {
+  0% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.05;
+  }
+}
+.mainContainer .featureContainer .featurePanel .fa-angle-double-up {
+  color: red;
+  margin-bottom: 10px;
+  -webkit-animation: featurePulse 10s infinite;
+  animation: featurePulse 10s infinite;
+  animation-delay: 1.5s;
+  opacity: 0.05;
+}
+@keyframes featurePulse {
+  0% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.05;
+  }
+}
+.mainContainer .featureContainer .featurePanel .fa-chart-bar {
+  color: #00ff00;
+  margin-bottom: 10px;
+  -webkit-animation: featurePulse 10s infinite;
+  animation: featurePulse 10s infinite;
+  animation-delay: 2.5s;
+  opacity: 0.05;
+}
+@keyframes featurePulse {
+  0% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.05;
+  }
+}
+.mainContainer #jump {
+  width: 95%;
+  height: 300px;
+}
+.mainContainer .reviewContainer {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 20px 0;
+  background: linear-gradient(to top, #171d22 70%, #182923 100%);
+  justify-content: space-evenly;
+  border-radius: 5px;
+  /* Heading */
+  /* Panels */
+}
+@media (max-width: 700px) {
+  .mainContainer .reviewContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.mainContainer .reviewContainer .reviewHeading {
+  width: 90%;
+  text-align: center;
+  /* Review stars */
+}
+.mainContainer .reviewContainer .reviewHeading h1 {
+  font-size: 2rem;
+}
+.mainContainer .reviewContainer .reviewHeading .starsSelector {
+  margin: 15px auto;
+  max-width: 300px;
+  height: 105px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px 0;
+}
+.mainContainer .reviewContainer .reviewHeading .starsSelector .stars {
+  color: goldenrod;
+  margin: 10px 0;
+  padding: 8px;
+}
+.mainContainer .reviewContainer .reviewHeading .starsSelector .fa-star {
+  padding: 10px 10px 12px 11px;
+}
+.mainContainer .reviewContainer .reviewHeading .starSelected {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.mainContainer .reviewContainer .reviewPanel {
+  width: 28%;
+  min-height: 250px;
+  margin: 15px auto;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .mainContainer .reviewContainer .reviewPanel {
+    min-height: 200px;
+  }
+}
+.mainContainer .reviewContainer .reviewPanel h1 {
+  width: 90%;
+  height: 50px;
+  padding-top: 10px;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .mainContainer .reviewContainer .reviewPanel h1 {
+    height: 40px;
+  }
+}
+.mainContainer .reviewContainer .reviewPanel .starContainer {
+  color: goldenrod;
+}
+@media (max-width: 700px) {
+  .mainContainer .reviewContainer .reviewPanel {
+    width: 90%;
+  }
+}
